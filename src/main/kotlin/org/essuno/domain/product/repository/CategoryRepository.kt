@@ -1,0 +1,9 @@
+package org.essuno.domain.product.repository
+
+import org.essuno.domain.product.entity.Category
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface CategoryRepository : JpaRepository<Category, Long> {
+
+    fun findAllByParentId(parentId: Long): List<Category>
+}
