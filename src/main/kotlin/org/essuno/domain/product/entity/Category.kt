@@ -13,7 +13,7 @@ import java.util.Date
 class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long? = null
+    val id: Int? = null
 
     @Column(name="type", nullable = false, length = 100)
     var type: String = ""
@@ -22,5 +22,5 @@ class Category {
     var name: String = ""
 
     @Column(name="parent_id")
-    var parentId: Long? = null
+    var parentId: Int? = null
 }

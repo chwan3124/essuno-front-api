@@ -16,7 +16,7 @@ class CategoryListApi(
 ) {
 
     @GetMapping("/categories/{categoryId}")
-    fun getCategory(@PathVariable("categoryId") categoryId: Long): ApiResponse<CategoryListView>{
+    fun getCategory(@PathVariable("categoryId") categoryId: Int): ApiResponse<CategoryListView>{
         return ApiResponse.success(categoryListService.getCategories(categoryId))
     }
 }

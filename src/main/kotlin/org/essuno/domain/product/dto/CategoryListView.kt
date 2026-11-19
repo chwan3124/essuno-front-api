@@ -6,6 +6,6 @@ data class CategoryListView(
 )
 
 data class CategoryItem(
-    var id:Long = 0L,
+    var id:Int = 0,
     var name: String = "",
 )

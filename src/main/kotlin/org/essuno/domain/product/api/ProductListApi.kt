@@ -16,7 +16,7 @@ class ProductListApi(
     private val productListService: ProductListService
 ) {
     @GetMapping("/products")
-    fun getProducts(@RequestParam("page") page: Int): ApiResponse<ProductListView>{
-        return ApiResponse.success(productListService.getProducts(page))
+    fun getProducts(@RequestParam("page") page: Int, @RequestParam("categoryId") categoryId: Int): ApiResponse<ProductListView>{
+        return ApiResponse.success(productListService.getProducts(page, categoryId))
     }
 }

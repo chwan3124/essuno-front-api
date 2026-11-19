@@ -10,7 +10,7 @@ class CategoryListService(
     private val categoryRepository: CategoryRepository
 ) {
 
-    fun getCategories(categoryId: Long): CategoryListView{
+    fun getCategories(categoryId: Int): CategoryListView{
         val categoryListView : CategoryListView = CategoryListView()
         val category = categoryRepository.findById(categoryId).orElseThrow { RuntimeException("Category not found!") };
 
